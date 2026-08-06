@@ -7,3 +7,6 @@ path = get_path("nybb")
 gdf = gpd.read_file(path)
 
 print(gdf.head())
+
+gdf.show()
+# gdf.plot()
