@@ -8,5 +8,5 @@ gdf = gpd.read_file(path)
 
 print(gdf.head())
 
-gdf.show()
-# gdf.plot()
+gdf.plot()
+plt.show()
