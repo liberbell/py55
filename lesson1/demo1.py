@@ -17,7 +17,7 @@ print(gdf.head())
 
 m = folium.Map(location=[40.7, -73.94], zoom_start=10, tiles="CartoDB positron")
 
-for _, r in gdf.itterrows():
+for _, r in gdf.iterrows():
     sim_geo = gpd.GeoSeries(r["geometry"]).simplify(tolerance=0.001)
     geo_j = sim_geo.to_json()
     geo_j = folium.GeoJson(data=geo_j, style_function=lambda x: {"fillcolor": "orange"})
