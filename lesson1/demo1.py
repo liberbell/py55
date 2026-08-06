@@ -9,4 +9,8 @@ gdf = gpd.read_file(path)
 print(gdf.head())
 
 gdf.plot()
-plt.show()
+# plt.show()
+
+gdf = gdf.to_crs(epsg=4326)
+print(gdf.crs)
+print(gdf.head())
