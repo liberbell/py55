@@ -16,4 +16,5 @@ print(gdf.crs)
 print(gdf.head())
 
 m = folium.Map(location=[40.7, -73.94], zoom_start=10, tiles="CartoDB positron")
-print(m)
+output_file = "map.html"
+m.save(output_file)
