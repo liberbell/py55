@@ -1,8 +1,9 @@
 import geopandas as gpd
 import folium
 import matplotlib.pyplot as plt
+from geodatasets import get_path
 
-path = gpd.dataset.get_path("nybb")
+path = get_path("nybb")
 gdf = gpd.read_file(path)
 
 print(gdf.head())
