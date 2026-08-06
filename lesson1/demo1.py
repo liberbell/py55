@@ -15,5 +15,5 @@ gdf = gdf.to_crs(epsg=4326)
 print(gdf.crs)
 print(gdf.head())
 
-m = folium.Map(location=[40.7, -73.94], zoom_start=10, tiles="CartDB positron")
+m = folium.Map(location=[40.7, -73.94], zoom_start=10, tiles="CartoDB positron")
 print(m)
