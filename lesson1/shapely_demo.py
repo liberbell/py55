@@ -6,13 +6,15 @@ from shapely.geometry import Point, LineString, Polygon, MultiPoint, MultiLineSt
 point = Point(0.0, 1.0)
 print(point)
 
-line = LineString([(0, 0), (1, 1), (3, 0), (5, 2)])
+# line = LineString([(0, 0), (1, 1), (3, 0), (5, 2)])
 
 # gdf = gpd.GeoDataFrame(geometry=[line], crs="EPSG:4326")
 
-polygon = Polygon([(0, 0), (1, 1), (3, 0), (0, 0)])
+# polygon = Polygon([(0, 0), (1, 1), (3, 0), (0, 0)])
 
-gdf = gpd.GeoDataFrame(geometry=[polygon], crs="EPSG:4326")
+points = MultiPoint([(0, 0), (1, 0)])
+
+gdf = gpd.GeoDataFrame(geometry=[points], crs="EPSG:4326")
 
 
 m = gdf.explore()
