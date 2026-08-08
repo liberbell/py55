@@ -12,6 +12,9 @@ line = LineString([(0, 0), (1, 1), (3, 0), (5, 2)])
 
 polygon = Polygon([(0, 0), (1, 1), (3, 0), (0, 0)])
 
+gdf = gpd.GeoDataFrame(geometry=[polygon], crs="EPSG:4326")
+
+
 m = gdf.explore()
 output_file = "shapely_result.html"
 m.save(output_file)
