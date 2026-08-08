@@ -12,7 +12,10 @@ print(point)
 
 # polygon = Polygon([(0, 0), (1, 1), (3, 0), (0, 0)])
 
-points = MultiPoint([(0, 0), (1, 0)])
+# points = MultiPoint([(0, 0), (1, 0)])
+
+cords = [((0, 0), (1, 1)), ()]
+lines = MultiLineString(cords)
 
 gdf = gpd.GeoDataFrame(geometry=[points], crs="EPSG:4326")
 
