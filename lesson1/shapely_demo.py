@@ -8,7 +8,9 @@ print(point)
 
 line = LineString([(0, 0), (1, 1), (3, 0), (5, 2)])
 
-gdf = gpd.GeoDataFrame(geometry=[line], crs="EPSG:4326")
+# gdf = gpd.GeoDataFrame(geometry=[line], crs="EPSG:4326")
+
+polygon = Polygon([(0, 0), (1, 1), (3, 0), (0, 0)])
 
 m = gdf.explore()
 output_file = "shapely_result.html"
