@@ -34,7 +34,7 @@ s = gpd.GeoSeries([
 ])
 # print(s.buffer(0.5))
 
-result = s.buffer(0.5)[0]
+result = s.buffer(0.5)[2]
 
 gdf = gpd.GeoDataFrame(geometry=[result], crs="EPSG:4326")
 
