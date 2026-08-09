@@ -19,9 +19,11 @@ print(point)
 
 a = Polygon([(0, 0), (0, 1), (1, 1), (1, 0)])
 b = Polygon([(2, 0), (2, 1), (3, 1), (3, 0)])
-polygons = MultiPolygon([a, b])
+# polygons = MultiPolygon([a, b])
 
-gdf = gpd.GeoDataFrame(geometry=[polygons], crs="EPSG:4326")
+l = LineString([(1, -1), (1, 0), (2, 0), (2, 1)])
+
+gdf = gpd.GeoDataFrame(geometry=[l], crs="EPSG:4326")
 
 
 m = gdf.explore()
