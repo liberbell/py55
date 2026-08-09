@@ -32,7 +32,7 @@ s = gpd.GeoSeries([
     LineString([(1, -1), (1, 0), (2, 0), (2, 1)]),
     Polygon([(3, -1), (4, 0), (3, 1)])
 ])
-print(s.buffer(0.5))
+# print(s.buffer(0.5))
 
 result = s.buffer(0.5)[0]
 
