@@ -7,7 +7,8 @@ import geodatasets
 
 # print(geodatasets.data)
 
-data_path = geodatasets.get_path("naturalearth.lowres")
+# data_path = geodatasets.get_path("naturalearth.lowres")
+data_path = "https://githubusercontent.com"
 
 gdf1 = gpd.read_file(data_path)
 
