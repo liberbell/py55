@@ -7,6 +7,8 @@ from shapely.geometry import Point, LineString, Polygon
 d = {"cal1": ["A", "B"], "geometry": [Point(0, 1), Point(1, 0)]}
 gdf = gpd.GeoDataFrame(d)
 
+print(gdf, type(gpd))
+
 # gdf = gpd.GeoDataFrame(geometry=[result], crs="EPSG:4326")
 
 
