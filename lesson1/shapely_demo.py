@@ -25,6 +25,7 @@ l = LineString([(1, -1), (1, 0), (2, 0), (2, 1)])
 print(l.length)
 
 p = Polygon([(3, -1), (4, 0), (3, 1)])
+print(p.area)
 
 gdf = gpd.GeoDataFrame(geometry=[p], crs="EPSG:4326")
 
