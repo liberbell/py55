@@ -22,10 +22,13 @@ b = Polygon([(2, 0), (2, 1), (3, 1), (3, 0)])
 # polygons = MultiPolygon([a, b])
 
 l = LineString([(1, -1), (1, 0), (2, 0), (2, 1)])
+print(l.length)
 
-gdf = gpd.GeoDataFrame(geometry=[l], crs="EPSG:4326")
+p = Polygon([(3, -1), (4, 0), (3, 1)])
+
+gdf = gpd.GeoDataFrame(geometry=[p], crs="EPSG:4326")
 
 
-m = gdf.explore()
-output_file = "shapely_result.html"
-m.save(output_file)
+# m = gdf.explore()
+# output_file = "shapely_result.html"
+# m.save(output_file)
