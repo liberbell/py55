@@ -29,6 +29,6 @@ p = Polygon([(3, -1), (4, 0), (3, 1)])
 gdf = gpd.GeoDataFrame(geometry=[p], crs="EPSG:4326")
 
 
-# m = gdf.explore()
-# output_file = "shapely_result.html"
-# m.save(output_file)
+m = gdf.explore()
+output_file = "shapely_result.html"
+m.save(output_file)
