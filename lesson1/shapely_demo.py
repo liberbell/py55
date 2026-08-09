@@ -27,6 +27,13 @@ print(l.length)
 p = Polygon([(3, -1), (4, 0), (3, 1)])
 print(p.area)
 
+s = gpd.GeoSeries([
+    Point(0, 0),
+    LineString([(1, -1), (1, 0), (2, 0), (2, 1)]),
+    Polygon([(3, -1), (4, 0), (3, 1)])
+])
+print(s.buffer(0.5))
+
 gdf = gpd.GeoDataFrame(geometry=[p], crs="EPSG:4326")
 
 
