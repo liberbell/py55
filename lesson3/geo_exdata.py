@@ -16,8 +16,14 @@ data_path = geodatasets.get_path("geoda.airbnb")
 # data_path = "https://githubusercontent.com"
 # data_path = "https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
 
+
 gdf = gpd.read_file(data_path)
 
-m = gdf.explore()
+gdf2 = gpd.read_file(
+    "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/"
+    "ne_110m_populated_places_simple.geojson"
+)
+
+m = gdf2.explore()
 output_file = "exdata_result.html"
 m.save(output_file)
