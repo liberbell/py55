@@ -24,8 +24,8 @@ gdf2 = gpd.read_file(
     "ne_110m_populated_places_simple.geojson"
 )
 
-m = gdf1.explore()
-gdf2.plot(ax=ax, color="orange", markersize=3)
+ax = gdf1.explore()
+gdf2.explore(ax=ax, color="orange", marker_kwds={"radius": 3})
 
 output_file = "exdata_result.html"
 m.save(output_file)
