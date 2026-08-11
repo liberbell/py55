@@ -25,7 +25,7 @@ gdf2 = gpd.read_file(
 )
 
 ax = gdf1.explore()
-gdf2.explore(ax=ax, color="orange", marker_kwds={"radius": 3})
+gdf2.explore(m=ax, color="orange", marker_kwds={"radius": 3})
 
 output_file = "exdata_result.html"
 ax.save(output_file)
