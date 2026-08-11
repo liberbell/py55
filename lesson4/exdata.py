@@ -10,7 +10,7 @@ from geodatasets import get_path
 gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
 # print(gdf["N02_003"].unique())
 print(gdf)
-print(gdf["N02_003"].unique())
+print(gdf["路線名"].unique())
 
 # m = gdf.explore(width=500, height=800)
 # output_file = "train_exdata.html"
