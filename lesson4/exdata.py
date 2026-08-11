@@ -6,4 +6,5 @@ from shapely.geometry import Point, LineString, Polygon
 import geodatasets
 from geodatasets import get_path
 
-gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp")
+gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp", encoding="shift-jis")
+print(gdf)
