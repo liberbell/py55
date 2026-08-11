@@ -10,9 +10,8 @@ from geodatasets import get_path
 gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
 # print(gdf)
 
-fig = plt.figure(figsize=(8, 10))
-ax = fig.add_subplot(1, 1, 1)
+fig = plt.figure(width=500, height=800)
 
-m = gdf.explore(m=ax)
+m = gdf.explore()
 output_file = "train_exdata.html"
 m.save(output_file)
