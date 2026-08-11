@@ -17,13 +17,15 @@ data_path = geodatasets.get_path("geoda.airbnb")
 # data_path = "https://naciscdn.org/naturalearth/110m/cultural/ne_110m_admin_0_countries.zip"
 
 
-gdf = gpd.read_file(data_path)
+gdf1 = gpd.read_file(data_path)
 
 gdf2 = gpd.read_file(
     "https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/"
     "ne_110m_populated_places_simple.geojson"
 )
 
-m = gdf2.explore()
+m = gdf1.explore()
+gdf2.plot(ax=ax, color="orange", markersize=3)
+
 output_file = "exdata_result.html"
 m.save(output_file)
