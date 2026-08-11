@@ -28,4 +28,4 @@ ax = gdf1.explore()
 gdf2.explore(ax=ax, color="orange", marker_kwds={"radius": 3})
 
 output_file = "exdata_result.html"
-m.save(output_file)
+ax.save(output_file)
