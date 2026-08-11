@@ -8,3 +8,7 @@ from geodatasets import get_path
 
 gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp", encoding="shift-jis")
 print(gdf)
+
+m = gdf.explore()
+output_file = "train_exdata.html"
+m.save(output_file)
