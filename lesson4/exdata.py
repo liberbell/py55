@@ -8,8 +8,8 @@ from geodatasets import get_path
 
 # gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp", encoding="shift-jis")
 gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
-# print(gdf)
+print(gdf["N02(_003"].unique())
 
-m = gdf.explore(width=500, height=800)
-output_file = "train_exdata.html"
-m.save(output_file)
+# m = gdf.explore(width=500, height=800)
+# output_file = "train_exdata.html"
+# m.save(output_file)
