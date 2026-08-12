@@ -12,7 +12,8 @@ gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8
 # print(gdf)
 # print(gdf["路線名"].unique())
 
-gdf_yamanote = gdf[gdf["路線名"]== "山手線"]
+gdf_yamanote = gdf[(gdf["路線名"]== "山手線") & (gdf["運営会社"] == "東日本旅客鉄道")]
+print(gdf_yamanote)
 
 # m = gdf.explore(width=500, height=800)
 m = gdf_yamanote.explore()
