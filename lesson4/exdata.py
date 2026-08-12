@@ -26,6 +26,6 @@ gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
 
 # m = gdf.explore(width=500, height=800)
-m = gdf_yamanote.explore()
+m = gdf.explore()
 output_file = "train_exdata.html"
 m.save(output_file)
