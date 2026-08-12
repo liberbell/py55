@@ -22,9 +22,10 @@ df = pd.read_csv("N02-19_GML/koban.csv", encoding="cp932")
 print(df)
 
 geometry = gpd.points_from_xy(df["経度"], df["緯度"])
+gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
 
 # m = gdf.explore(width=500, height=800)
-# m = gdf_yamanote.explore()
-# output_file = "train_exdata.html"
-# m.save(output_file)
+m = gdf_yamanote.explore()
+output_file = "train_exdata.html"
+m.save(output_file)
