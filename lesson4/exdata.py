@@ -17,7 +17,8 @@ pd.set_option('display.max_columns', 1000)
 # gdf_yamanote = gdf[(gdf["路線名"]== "山手線") & (gdf["運営会社"] == "東日本旅客鉄道")]
 # print(gdf_yamanote)
 
-df = pd.read_csv("N02-19_GML/kokyoshisetsu.csv", encoding="cp932")
+# df = pd.read_csv("N02-19_GML/kokyoshisetsu.csv", encoding="cp932")
+df = pd.read_csv("N02-19_GML/koban.csv", encoding="cp932")
 print(df)
 
 
