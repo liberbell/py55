@@ -7,15 +7,19 @@ import geodatasets
 from geodatasets import get_path
 
 # gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp", encoding="shift-jis")
-gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
+# gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
 # print(gdf["N02_003"].unique())
 # print(gdf)
 # print(gdf["路線名"].unique())
 
-gdf_yamanote = gdf[(gdf["路線名"]== "山手線") & (gdf["運営会社"] == "東日本旅客鉄道")]
-print(gdf_yamanote)
+# gdf_yamanote = gdf[(gdf["路線名"]== "山手線") & (gdf["運営会社"] == "東日本旅客鉄道")]
+# print(gdf_yamanote)
+
+df = pd.read_csv("N02-19_GML/kokyoshisetsu.csv", encoding="shift-jis")
+print(df)
+
 
 # m = gdf.explore(width=500, height=800)
-m = gdf_yamanote.explore()
-output_file = "train_exdata.html"
-m.save(output_file)
+# m = gdf_yamanote.explore()
+# output_file = "train_exdata.html"
+# m.save(output_file)
