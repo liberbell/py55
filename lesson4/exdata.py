@@ -27,6 +27,9 @@ gdf = gpd.GeoDataFrame(df, geometry=geometry)
 gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
 print(gyosei)
 
+gyousei_temp = gyosei.dropna(subset=["N03_003"])
+print(gyousei_temp)
+
 
 # m = gdf.explore(width=500, height=800)
 m = gdf.explore()
