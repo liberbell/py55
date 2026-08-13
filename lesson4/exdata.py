@@ -30,7 +30,8 @@ gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
 gyousei_temp = gyosei.dropna(subset=["N03_003"])
 # print(gyousei_temp)
 
-gyousei_ku = gyousei_temp["N03_003"].str.contain("区")
+gyousei_ku = gyousei_temp["N03_003"].str.contains("区")
+print(gyousei_ku)
 
 
 # m = gdf.explore(width=500, height=800)
