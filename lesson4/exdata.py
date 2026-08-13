@@ -24,6 +24,9 @@ print(df)
 geometry = gpd.points_from_xy(df["経度"], df["緯度"])
 gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
+gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
+print(gyosei)
+
 
 # m = gdf.explore(width=500, height=800)
 m = gdf.explore()
