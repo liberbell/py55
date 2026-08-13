@@ -34,7 +34,7 @@ gyousei_temp = gyosei.dropna(subset=["N03_003"])
 gyousei_ku = gyosei[gyosei["N03_003"].str.contains("区")]
 print(gyousei_ku)
 
-pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
+pd.DataFrame(gyosei).to_csv("output.csv", index=False)
 
 
 # m = gdf.explore(width=500, height=800)
