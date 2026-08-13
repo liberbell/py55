@@ -6,7 +6,7 @@ from shapely.geometry import Point, LineString, Polygon
 import geodatasets
 from geodatasets import get_path
 
-pd.set_option('display.max_rows', None)
+pd.set_option('display.max_rows', 100)
 pd.set_option('display.max_columns', None)
 
 # gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp", encoding="shift-jis")
@@ -26,13 +26,13 @@ geometry = gpd.points_from_xy(df["経度"], df["緯度"])
 gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
 gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
-print(gyosei)
+# print(gyosei)
 
 gyousei_temp = gyosei.dropna(subset=["N03_003"])
-# print(gyousei_temp)
+print(gyousei_temp)
 
 gyousei_ku = gyousei_temp[gyousei_temp["N03_003"].str.contains("区")]
-print(gyousei_ku)
+# print(gyousei_ku)
 
 
 # m = gdf.explore(width=500, height=800)
