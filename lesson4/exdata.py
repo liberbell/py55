@@ -25,14 +25,14 @@ df = pd.read_csv("N02-19_GML/koban.csv", encoding="cp932")
 geometry = gpd.points_from_xy(df["経度"], df["緯度"])
 gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
-gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
-# print(gyosei)
+gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.geojson")
+print(gyosei)
 
 gyousei_temp = gyosei.dropna(subset=["N03_003"])
-print(gyousei_temp)
+# print(gyousei_temp)
 
-gyousei_ku = gyousei_temp[gyousei_temp["N03_003"].str.contains("区")]
-# print(gyousei_ku)
+gyousei_ku = gyosei[gyosei["N03_003"].str.contains("区")]
+print(gyousei_ku)
 
 
 # m = gdf.explore(width=500, height=800)
