@@ -35,13 +35,20 @@ gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 # print(gyousei_ku)
 
 # pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
+a = []
+for index, row in gdf.iterrows():
+    a.append(row["geometry"].cords)
+print(a)
+
 ax = gdf.explore()
-gyousei_ku.explore(m=ax, color="orange", marker_kwds={"radius": 3})
+
 
 shinagawa = gyosei[gyosei["N03_004"].str.contains("品川区")]
-print(shinagawa)
+# print(shinagawa)
 
 # m = gdf.explore(width=500, height=800)
-m = gyousei_ku.explore()
+m = shinagawa.explore()
+shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
+
 output_file = "train_exdata.html"
 m.save(output_file)
