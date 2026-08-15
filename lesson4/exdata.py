@@ -38,7 +38,8 @@ gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 a = []
 for index, row in gdf.iterrows():
     a.append(list(row["geometry"].coords))
-print(a)
+# print(a)
+gdf.apply(lambda row:list("geometry"))
 
 ax = gdf.explore()
 
