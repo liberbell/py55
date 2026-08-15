@@ -32,10 +32,11 @@ gyousei_temp = gyosei.dropna(subset=["N03_004"])
 # print(gyousei_temp)
 
 gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
-print(gyousei_ku)
+# print(gyousei_ku)
 
 # pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
-
+ax = gdf.explore()
+gyousei_ku.explore(m=ax, color="orange", marker_kwds={"radius": 3})
 
 # m = gdf.explore(width=500, height=800)
 m = gyousei_ku.explore()
