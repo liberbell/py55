@@ -37,7 +37,7 @@ gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 # pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
 a = []
 for index, row in gdf.iterrows():
-    a.append(row["geometry"].cords)
+    a.append(list(row["geometry"].coords))
 print(a)
 
 ax = gdf.explore()
