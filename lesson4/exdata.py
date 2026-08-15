@@ -34,10 +34,10 @@ gyousei_temp = gyosei.dropna(subset=["N03_004"])
 gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 print(gyousei_ku)
 
-pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
+# pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
 
 
 # m = gdf.explore(width=500, height=800)
-m = gdf.explore()
+m = gyousei_ku.explore()
 output_file = "train_exdata.html"
 m.save(output_file)
