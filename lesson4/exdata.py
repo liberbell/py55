@@ -39,7 +39,8 @@ a = []
 for index, row in gdf.iterrows():
     a.append(list(row["geometry"].coords))
 # print(a)
-gdf.apply(lambda row:list("geometry"))
+gdf.apply(lambda row:list(row.geometry.coords), axis=1)
+print(gdf)
 
 ax = gdf.explore()
 
