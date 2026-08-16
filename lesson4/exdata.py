@@ -72,7 +72,7 @@ print(points_gdf)
 points_gdf = points_gdf.to_crs("EPSG:6691")
 print(points_gdf)
 
-dist = points_gdf.loc[0, "geometry"].distance(points_gdf.loc[1, "distance"])
+dist = points_gdf.loc[0, "geometry"].distance(points_gdf.loc[1, "geometry"])
 print(dist)
 
 m = gdf.explore()
