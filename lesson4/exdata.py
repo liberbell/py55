@@ -25,7 +25,7 @@ df = pd.read_csv("N02-19_GML/koban.csv", encoding="cp932")
 # geometry = gpd.points_from_xy(df["経度"], df["緯度"])
 # gdf = gpd.GeoDataFrame(df, geometry=geometry)
 
-gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.geojson")
+gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
 # print(gyosei)
 
 gyousei_temp = gyosei.dropna(subset=["N03_004"])
@@ -73,10 +73,12 @@ points_gdf = points_gdf.to_crs("EPSG:6691")
 # print(points_gdf)
 
 dist = points_gdf.loc[0, "geometry"].distance(points_gdf.loc[1, "geometry"])
-print(dist)
+# print(dist)
 
 train_gdf.to_crs("EPSG: 6691", inplace=True)
-print(train_gdf)
+# print(train_gdf)
+
+print(gyosei)
 
 m = train_gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
