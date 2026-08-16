@@ -41,7 +41,7 @@ gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 # print(a)
 # b = gdf.apply(lambda row:list(row.geometry.coords), axis=1)
 # print(type(b))
-print(gdf)
+# print(gdf)
 
 # c = gdf.apply(lambda row:list(row.geometry.coords), axis=1)
 
@@ -52,6 +52,8 @@ shinagawa = gyosei[gyosei["N03_004"].str.contains("品川区")]
 # m = gdf.explore(width=500, height=800)
 m = gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
+print(shinagawa.crs)
+print(gdf.crs)
 
 output_file = "train_exdata.html"
 m.save(output_file)
