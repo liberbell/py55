@@ -28,10 +28,10 @@ df = pd.read_csv("N02-19_GML/koban.csv", encoding="cp932")
 gyosei = gpd.read_file("N03-20240101_13_GML/N03-20240101_13.shp")
 # print(gyosei)
 
-gyousei_temp = gyosei.dropna(subset=["N03_004"])
+# gyousei_temp = gyosei.dropna(subset=["N03_004"])
 # print(gyousei_temp)
 
-gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
+# gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 # print(gyousei_ku)
 
 # pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
@@ -80,8 +80,10 @@ train_gdf.to_crs("EPSG: 6691", inplace=True)
 
 print(gyosei)
 gyousei_temp = gyosei.dropna(subset=["N03_004"])
-pd.DataFrame(gyousei_temp).to_csv("output.csv", index=False)
-print(gyousei_temp)
+gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
+
+pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
+print(gyousei_ku)
 
 m = train_gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
