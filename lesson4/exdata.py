@@ -79,6 +79,8 @@ train_gdf.to_crs("EPSG: 6691", inplace=True)
 # print(train_gdf)
 
 print(gyosei)
+gyousei_temp = gyosei.dropna(subset=["N03_004"])
+print(gyousei_temp)
 
 m = train_gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
