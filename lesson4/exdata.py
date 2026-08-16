@@ -64,9 +64,12 @@ print(a.distance(b))
 tokyo_station = Point(139.767, 35.681)
 tokyo_tower = Point(139.745, 35.659)
 distance01 = tokyo_station.distance(tokyo_tower)
-print(distance01)
+# print(distance01)
 
 points_gdf = gpd.GeoDataFrame({"place": ["tokyo_station", "tokyo_tower"], "geometry": [tokyo_station, tokyo_tower]}, crs="EPSG:4326")
+print(points_gdf)
+
+points_gdf = points_gdf.to_crs("EPSG:6691")
 print(points_gdf)
 
 m = gdf.explore()
