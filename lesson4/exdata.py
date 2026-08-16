@@ -72,6 +72,9 @@ print(points_gdf)
 points_gdf = points_gdf.to_crs("EPSG:6691")
 print(points_gdf)
 
+dist = points_gdf.loc[0, "geometry"].distance(points_gdf.loc[1, "distance"])
+print(dist)
+
 m = gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 output_file = "train_exdata.html"
