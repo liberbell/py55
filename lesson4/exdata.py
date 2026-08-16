@@ -10,7 +10,7 @@ pd.set_option('display.max_rows', 100)
 pd.set_option('display.max_columns', None)
 
 # gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.shp", encoding="shift-jis")
-gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
+train_gdf = gpd.read_file("N02-19_GML/N02-19_RailroadSection.geojson", encoding="utf-8")
 # print(gdf["N02_003"].unique())
 # print(gdf)
 # print(gdf["路線名"].unique())
@@ -59,7 +59,7 @@ shinagawa = gyosei[gyosei["N03_004"].str.contains("品川区")]
 
 a = Point(0, 1)
 b = Point(1, 1)
-print(a.distance(b))
+# print(a.distance(b))
 
 tokyo_station = Point(139.767, 35.681)
 tokyo_tower = Point(139.745, 35.659)
@@ -67,15 +67,18 @@ distance01 = tokyo_station.distance(tokyo_tower)
 # print(distance01)
 
 points_gdf = gpd.GeoDataFrame({"place": ["tokyo_station", "tokyo_tower"], "geometry": [tokyo_station, tokyo_tower]}, crs="EPSG:4326")
-print(points_gdf)
+# print(points_gdf)
 
 points_gdf = points_gdf.to_crs("EPSG:6691")
-print(points_gdf)
+# print(points_gdf)
 
 dist = points_gdf.loc[0, "geometry"].distance(points_gdf.loc[1, "geometry"])
 print(dist)
 
-m = gdf.explore()
+train_gdf.to_crs("EPSG: 6691", inplace=True)
+print(train_gdf)
+
+m = train_gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 output_file = "train_exdata.html"
 m.save(output_file)
