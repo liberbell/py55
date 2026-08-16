@@ -66,6 +66,8 @@ tokyo_tower = Point(139.745, 35.659)
 distance01 = tokyo_station.distance(tokyo_tower)
 print(distance01)
 
+points_gdf = gpd.GeoDataFrame({"place": ["tokyo_station", "tokyo_tower"]})
+
 m = gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 output_file = "train_exdata.html"
