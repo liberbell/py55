@@ -61,6 +61,11 @@ a = Point(0, 1)
 b = Point(1, 1)
 print(a.distance(b))
 
+tokyo_station = Point(139.767, 35.681)
+tokyo_tower = Point(139.745, 35.659)
+distance01 = tokyo_station.distance(tokyo_tower)
+print(distance01)
+
 m = gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 output_file = "train_exdata.html"
