@@ -50,13 +50,18 @@ shinagawa = gyosei[gyosei["N03_004"].str.contains("品川区")]
 # print(shinagawa)
 
 # m = gdf.explore(width=500, height=800)
-m = gdf.explore()
+
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 # print(shinagawa.crs)
-print(gdf.crs)
+# print(gdf.crs)
 
-gdf.to_crs(epsg=6668, inplace=True)
-print(gdf.crs)
+# gdf.to_crs(epsg=6668, inplace=True)
+# print(gdf.crs)
 
+a = Point(0, 1)
+b = Point(1, 1)
+print(a.distance(b))
+
+m = gdf.explore()
 output_file = "train_exdata.html"
 m.save(output_file)
