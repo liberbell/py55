@@ -80,6 +80,7 @@ train_gdf.to_crs("EPSG: 6691", inplace=True)
 
 print(gyosei)
 gyousei_temp = gyosei.dropna(subset=["N03_004"])
+pd.DataFrame(gyousei_temp).to_csv("output.csv", index=False)
 print(gyousei_temp)
 
 m = train_gdf.explore()
