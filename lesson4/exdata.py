@@ -81,6 +81,7 @@ train_gdf.to_crs("EPSG: 6691", inplace=True)
 print(gyosei)
 gyousei_temp = gyosei.dropna(subset=["N03_004"])
 gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
+gyousei_ku.to_crs("EPSG: 6691", inplace=True)
 
 pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
 print(gyousei_ku)
