@@ -99,7 +99,9 @@ s = gpd.GeoSeries([a, b ,c, d, e])
 print(s)
 
 print(a.intersects(b))
-
+print(e.touches(c))
+print(e.touches(a))
+print(e.touches(b))
 
 m = s.explore()
 # shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
