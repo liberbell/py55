@@ -92,7 +92,9 @@ pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
 a = LineString([(0, 0), (5, 5)])
 b = LineString([(2, 2), (10, 2)])
 c = Point(2.5, 2.5)
+d = Point(1, 1)
 
+e = Polygon([(0, 0), (2, 0), (2, 2), (0, 2)])
 
 m = train_gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
