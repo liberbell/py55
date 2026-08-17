@@ -85,7 +85,7 @@ gyousei_ku.to_crs("EPSG: 6691", inplace=True)
 
 gyousei_area = gyousei_ku.geometry.area/10**6
 
-pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
+# pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
 # print(gyousei_ku)
 # print(gyousei_area)
 
@@ -102,6 +102,14 @@ print(a.intersects(b))
 print(e.touches(c))
 print(e.touches(a))
 print(e.touches(b))
+print(e.contains(a))
+print(e.contains(d))
+print("-------")
+
+world = gpd.read_file(gdp.datasets.)
+
+path = get_path("nybb")
+gdf = gpd.read_file(path)
 
 m = s.explore()
 # shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
