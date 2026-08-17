@@ -83,8 +83,11 @@ gyousei_temp = gyosei.dropna(subset=["N03_004"])
 gyousei_ku = gyosei[gyosei["N03_004"].str.contains("区")]
 gyousei_ku.to_crs("EPSG: 6691", inplace=True)
 
+gyousei_area = gyousei_ku.geometry.area/10**6
+
 pd.DataFrame(gyousei_ku).to_csv("output.csv", index=False)
 print(gyousei_ku)
+print(gyousei_area)
 
 m = train_gdf.explore()
 shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
