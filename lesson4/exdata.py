@@ -98,6 +98,8 @@ e = Polygon([(0, 0), (2, 0), (2, 2), (0, 2)])
 s = gpd.GeoSeries([a, b ,c, d, e])
 print(s)
 
+print(a.intersects(b))
+
 
 m = s.explore()
 # shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
