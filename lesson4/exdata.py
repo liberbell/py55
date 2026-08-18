@@ -106,15 +106,15 @@ print(e.contains(a))
 print(e.contains(d))
 print("-------")
 
-world = gpd.read_file(gdp.datasets.)
+# world = gpd.read_file(gdp.datasets.)
 
-path = get_path("nybb")
-gdf = gpd.read_file(path)
+# path = get_path("nybb")
+# gdf = gpd.read_file(path)
 
 # world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
 # cities = gpd.read_file(gpd.datasets.get_path("naturalearth_cities"))
 
-world_path = geodatasets.get_path("naturalearth.land")  # または "naturalearth.lowres"
+world_path = geodatasets.get_path("naturalearth.land")
 world = gpd.read_file(world_path)
 
 
