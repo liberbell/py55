@@ -124,7 +124,20 @@ cities = gpd.read_file(cities_path)
 print(world)
 print(cities)
 
-m = s.explore()
+# m = s.explore()
+m = world.explore(
+    color="lightgray", 
+    edgecolor="white", 
+    name="World Land"
+)
+
+m = cities.explore(
+    m=m, 
+    color="red", 
+    marker_kwds=dict(radius=5), 
+    name="Cities"
+)
+
 # shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
-output_file = "train_exdata.html"
+output_file = "cities_exdata.html"
 m.save(output_file)
