@@ -111,6 +111,19 @@ world = gpd.read_file(gdp.datasets.)
 path = get_path("nybb")
 gdf = gpd.read_file(path)
 
+# world = gpd.read_file(gpd.datasets.get_path("naturalearth_lowres"))
+# cities = gpd.read_file(gpd.datasets.get_path("naturalearth_cities"))
+
+world_path = geodatasets.get_path("naturalearth.land")  # または "naturalearth.lowres"
+world = gpd.read_file(world_path)
+
+
+cities_path = geodatasets.get_path("naturalearth.cities")
+cities = gpd.read_file(cities_path)
+
+print(world)
+print(cities)
+
 m = s.explore()
 # shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 output_file = "train_exdata.html"
