@@ -96,15 +96,15 @@ d = Point(1, 1)
 e = Polygon([(0, 0), (2, 0), (2, 2), (0, 2)])
 
 s = gpd.GeoSeries([a, b ,c, d, e])
-print(s)
+# print(s)
 
-print(a.intersects(b))
-print(e.touches(c))
-print(e.touches(a))
-print(e.touches(b))
-print(e.contains(a))
-print(e.contains(d))
-print("-------")
+# print(a.intersects(b))
+# print(e.touches(c))
+# print(e.touches(a))
+# print(e.touches(b))
+# print(e.contains(a))
+# print(e.contains(d))
+# print("-------")
 
 # world = gpd.read_file(gdp.datasets.)
 
@@ -116,6 +116,7 @@ print("-------")
 
 world_path = geodatasets.get_path("naturalearth.land")
 world = gpd.read_file(world_path)
+world.to_csv("world_data.csv", index=True, encoding="utf-8")
 
 
 cities_path = geodatasets.get_path("naturalearth.cities")
@@ -125,7 +126,7 @@ print(world)
 print(cities)
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
-countries = world[["geometry", "name"]].rename(columns={"name": "country"})
+# countries = world[["geometry", "name"]].rename(columns={"name": "country"})
 # m = s.explore()
 m = world.explore(
     color="lightgray", 
