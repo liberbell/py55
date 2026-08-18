@@ -124,8 +124,8 @@ cities = gpd.read_file(cities_path)
 print(world)
 print(cities)
 
-countries = world(["geometry", "name"]).rename(columns={"name": "country"})
-
+# countries = world(["geometry", "name"]).rename(columns={"name": "country"})
+countries = world[["geometry", "name"]].rename(columns={"name": "country"})
 # m = s.explore()
 m = world.explore(
     color="lightgray", 
