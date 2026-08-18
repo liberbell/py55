@@ -139,6 +139,8 @@ print(points)
 nearest_geoms = nearest_points(me, points)
 print(nearest_geoms)
 
+me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"]})
+
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
 # m = s.explore()
