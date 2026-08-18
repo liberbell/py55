@@ -116,11 +116,12 @@ s = gpd.GeoSeries([a, b ,c, d, e])
 
 world_path = geodatasets.get_path("naturalearth.land")
 world = gpd.read_file(world_path)
-world.to_csv("world_data.csv", index=True, encoding="utf-8")
+# world.to_csv("world_data.csv", index=True, encoding="utf-8")
 
 
 cities_path = geodatasets.get_path("naturalearth.cities")
 cities = gpd.read_file(cities_path)
+cities.to_csv("cities_data.csv", index=True, encoding="utf-8")
 
 print(world)
 print(cities)
