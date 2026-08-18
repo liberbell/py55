@@ -128,7 +128,16 @@ cities = gpd.read_file(cities_path)
 # print(cities)
 
 cities_with_world = cities.sjoin(world, how="inner", predicate="intersects")
-print(cities_with_world)
+# print(cities_with_world)
+
+me = Point(1, 1)
+pos1, pos2, pos3 = Point(0, 1), (2, 0), (2, 2)
+
+points = MultiPoint([pos1, pos2, pos3])
+print(points)
+
+nearest_geoms = nearest_points(me, points)
+print(nearest_geoms)
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
