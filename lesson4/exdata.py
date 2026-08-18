@@ -121,10 +121,12 @@ world = gpd.read_file(world_path)
 
 cities_path = geodatasets.get_path("naturalearth.cities")
 cities = gpd.read_file(cities_path)
-cities.to_csv("cities_data.csv", index=True, encoding="utf-8")
+# cities.to_csv("cities_data.csv", index=True, encoding="utf-8")
 
 print(world)
 print(cities)
+
+cities_with_world = cities.sjoin(world, how="inner", predicate="intersects")
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
