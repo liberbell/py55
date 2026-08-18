@@ -2,7 +2,8 @@ import geopandas as gpd
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from shapely.geometry import Point, LineString, Polygon
+from shapely.geometry import Point, LineString, Polygon, MultiPoint
+from shapely.ops import nearest_points
 import geodatasets
 from geodatasets import get_path
 
