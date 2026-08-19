@@ -155,7 +155,9 @@ me["nearest_location"] = me.apply(get_nearest_value, gdf=taxi, axis=1)
 
 # continents = world.dissolve(by="continent", aggfunc="sum")
 
-world.to_file(driver="ESRI Shapefile", filename="world_export.shp")
+# world.to_file(driver="ESRI Shapefile", filename="world_export.shp")
+world.to_file(driver="GeoJSON", filename="world_export.geojson")
+
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
 # m = s.explore()
