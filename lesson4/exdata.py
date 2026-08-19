@@ -143,7 +143,9 @@ me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"], "geometry":[Point(0, 0), 
 # print(me)
 
 taxi = gpd.GeoDataFrame({"taxy_name": ["Taxi1", "Taxi2", "Taxi3", "Taxi4"], "geometry":[Point(8, 3), Point(-2, 3), Point(0, 3), Point(4, -3)]})
-print(taxi)
+print(taxi.union_all())
+
+
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
