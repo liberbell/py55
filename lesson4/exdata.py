@@ -150,7 +150,8 @@ def get_nearest_value(row, gdf):
     nearest_geoms = nearest_points(row["geometry"], other_points)
     return nearest_geoms[1]
 
-me["nearest_location"] = me.apply(get_nearest_value, taxi, axis=1)
+me["nearest_location"] = me.apply(get_nearest_value, gdf=taxi, axis=1)
+print(me)
 
 
 
