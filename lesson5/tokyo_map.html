@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e92501c2b5689a587cbecbe8339ba1d8 {
+                #map_e5ca9183aef9ffd0dbd6b0619064b754 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,14 +54,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_e92501c2b5689a587cbecbe8339ba1d8" ></div>
+            <div class="folium-map" id="map_e5ca9183aef9ffd0dbd6b0619064b754" ></div>
         
 </body>
 <script>
     
     
-            var map_e92501c2b5689a587cbecbe8339ba1d8 = L.map(
-                "map_e92501c2b5689a587cbecbe8339ba1d8",
+            var map_e5ca9183aef9ffd0dbd6b0619064b754 = L.map(
+                "map_e5ca9183aef9ffd0dbd6b0619064b754",
                 {
                     center: [35.71, 139.81],
                     crs: L.CRS.EPSG3857,
@@ -78,7 +78,7 @@
 
         
     
-            var tile_layer_1bda23c554afe10103a0158f00f227ef = L.tileLayer(
+            var tile_layer_f33fb46e9870a0a37d1d6694748f1dfa = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -95,7 +95,28 @@
             );
         
     
-            tile_layer_1bda23c554afe10103a0158f00f227ef.addTo(map_e92501c2b5689a587cbecbe8339ba1d8);
+            tile_layer_f33fb46e9870a0a37d1d6694748f1dfa.addTo(map_e5ca9183aef9ffd0dbd6b0619064b754);
         
+    
+            var marker_c1483c4890d09ed683aa4524a2346bc8 = L.marker(
+                [35.71, 139.81],
+                {
+}
+            ).addTo(map_e5ca9183aef9ffd0dbd6b0619064b754);
+        
+    
+            var icon_4fe0242ec68b1171128af8847e5cbb92 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "camera",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+                marker_c1483c4890d09ed683aa4524a2346bc8.setIcon(icon_4fe0242ec68b1171128af8847e5cbb92);
+            
 </script>
 </html>
