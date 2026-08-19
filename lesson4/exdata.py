@@ -134,10 +134,10 @@ me = Point(1, 1)
 pos1, pos2, pos3 = Point(0, 1), (2, 0), (2, 2)
 
 points = MultiPoint([pos1, pos2, pos3])
-print(points)
+# print(points)
 
 nearest_geoms = nearest_points(me, points)
-print(nearest_geoms)
+# print(nearest_geoms)
 
 me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"], "geometry":[Point(0, 0), Point(5, 0), Point(1, 4)]})
 # print(me)
@@ -151,9 +151,9 @@ def get_nearest_value(row, gdf):
     return nearest_geoms[1]
 
 me["nearest_location"] = me.apply(get_nearest_value, gdf=taxi, axis=1)
-print(me)
+# print(me)
 
-
+continents = world.dissolve(by="continent", aggfunc="sum")
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
