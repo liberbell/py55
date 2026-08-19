@@ -140,7 +140,10 @@ nearest_geoms = nearest_points(me, points)
 print(nearest_geoms)
 
 me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"], "geometry":[Point(0, 0), Point(5, 0), Point(1, 4)]})
-print(me)
+# print(me)
+
+taxi = gpd.GeoDataFrame({"taxy_name": ["Taxi1", "Taxi2", "Taxi3", "Taxi4"], "geometry":[Point(8, 3), Point(-2, 3), Point(0, 3), Point(4, -3)]})
+print(taxi)
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
