@@ -143,7 +143,12 @@ me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"], "geometry":[Point(0, 0), 
 # print(me)
 
 taxi = gpd.GeoDataFrame({"taxy_name": ["Taxi1", "Taxi2", "Taxi3", "Taxi4"], "geometry":[Point(8, 3), Point(-2, 3), Point(0, 3), Point(4, -3)]})
-print(taxi.union_all())
+# print(taxi.union_all())
+
+def get_nearest_value(row, gdf):
+    other_points = gdf["geometry"].unary_union
+
+me["nearest_location"] = me.apply(get_nearest_value, taxi, axis=1)
 
 
 
