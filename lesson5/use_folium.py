@@ -9,7 +9,9 @@ map = folium.Map(location=[lat, lon], zoom_start=16)
 
 folium.Marker(
     location=[lat, lon],
-    icon=folium.Icon(color="red", icon="camera")
+    icon=folium.Icon(color="red", icon="camera"),
+    popup="Tokyo Sky Tree",
+    tooltip="Here"
 ).add_to(map)
 
 map.save("tokyo_map.html")
