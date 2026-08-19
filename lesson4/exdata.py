@@ -139,7 +139,8 @@ print(points)
 nearest_geoms = nearest_points(me, points)
 print(nearest_geoms)
 
-me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"]})
+me = gpd.GeoDataFrame({"person_name": ["A", "B", "C"], "geometry":[Point(0, 0), Point(5, 0), Point(1, 4)]})
+print(me)
 
 # countries = world(["geometry", "name"]).rename(columns={"name": "country"})
 # countries = world[["geometry", "name"]].rename(columns={"name": "country"})
@@ -159,4 +160,4 @@ m = cities.explore(
 
 # shinagawa.explore(m=m, color="orange", marker_kwds={"radius": 3})
 output_file = "cities_exdata.html"
-m.save(output_file)
+# m.save(output_file)
