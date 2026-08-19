@@ -7,4 +7,9 @@ lon = 139.81
 
 map = folium.Map(location=[lat, lon], zoom_start=16)
 
+folium.Marker(
+    location=[lat, lon],
+    icon=folium.Icon(color="red", icon="camera")
+).add_to(map)
+
 map.save("tokyo_map.html")
