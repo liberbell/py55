@@ -23,6 +23,9 @@ folium.Circle(
 ).add_to(map)
 
 # map = folium.Map(location=[lat, lon], zoom_start=16, tiles="cartodbdark_matter")
-map = folium.Map(location=[lat, lon], zoom_start=16, tiles="stamenterrain")
+# map = folium.Map(location=[lat, lon], zoom_start=16, tiles="stamenterrain")
+
+df = pd.read_csv("data/kindergartenlist.csv", encoding="shift-jis")
+print(df)
 
 map.save("tokyo_map.html")
