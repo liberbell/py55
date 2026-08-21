@@ -14,4 +14,12 @@ folium.Marker(
     tooltip="Here"
 ).add_to(map)
 
+folium.Circle(
+    location=[lat, lon],
+    radius=100,
+    color="blue",
+    fill=True,
+    fill_opacity=0.5
+).add_to(map)
+
 map.save("tokyo_map.html")
