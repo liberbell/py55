@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_c5de8d1da7284bcefcd390cbf976de7b {
+                #map_9594e734cfeb5c56ce72ae6b2e9c2474 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -54,14 +54,14 @@
 <body>
     
     
-            <div class="folium-map" id="map_c5de8d1da7284bcefcd390cbf976de7b" ></div>
+            <div class="folium-map" id="map_9594e734cfeb5c56ce72ae6b2e9c2474" ></div>
         
 </body>
 <script>
     
     
-            var map_c5de8d1da7284bcefcd390cbf976de7b = L.map(
-                "map_c5de8d1da7284bcefcd390cbf976de7b",
+            var map_9594e734cfeb5c56ce72ae6b2e9c2474 = L.map(
+                "map_9594e734cfeb5c56ce72ae6b2e9c2474",
                 {
                     center: [35.71, 139.81],
                     crs: L.CRS.EPSG3857,
@@ -78,15 +78,15 @@
 
         
     
-            var tile_layer_0b7baafc81f85ab69b521039fc770963 = L.tileLayer(
-                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+            var tile_layer_a6135390d2411c97ce455bd27aae6a5d = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
-  "maxZoom": 19,
-  "maxNativeZoom": 19,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
   "noWrap": false,
-  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
-  "subdomains": "abc",
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
   "detectRetina": false,
   "tms": false,
   "opacity": 1,
@@ -95,61 +95,7 @@
             );
         
     
-            tile_layer_0b7baafc81f85ab69b521039fc770963.addTo(map_c5de8d1da7284bcefcd390cbf976de7b);
-        
-    
-            var marker_fa6ee169b8fabcb8f1b74968be2fb70c = L.marker(
-                [35.71, 139.81],
-                {
-}
-            ).addTo(map_c5de8d1da7284bcefcd390cbf976de7b);
-        
-    
-            var icon_fe12d6f39812d0572ca8b41da85b33a4 = L.AwesomeMarkers.icon(
-                {
-  "markerColor": "red",
-  "iconColor": "white",
-  "icon": "camera",
-  "prefix": "glyphicon",
-  "extraClasses": "fa-rotate-0",
-}
-            );
-        
-    
-        var popup_39f7f88405195908384964ab04f4aae9 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_42d6da5dbaa8ee06723d4fa84b62cc6e = $(`<div id="html_42d6da5dbaa8ee06723d4fa84b62cc6e" style="width: 100.0%; height: 100.0%;">Tokyo Sky Tree</div>`)[0];
-                popup_39f7f88405195908384964ab04f4aae9.setContent(html_42d6da5dbaa8ee06723d4fa84b62cc6e);
-            
-        
-
-        marker_fa6ee169b8fabcb8f1b74968be2fb70c.bindPopup(popup_39f7f88405195908384964ab04f4aae9)
-        ;
-
-        
-    
-    
-            marker_fa6ee169b8fabcb8f1b74968be2fb70c.bindTooltip(
-                `<div>
-                     Here
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-                marker_fa6ee169b8fabcb8f1b74968be2fb70c.setIcon(icon_fe12d6f39812d0572ca8b41da85b33a4);
-            
-    
-            var circle_06ae72ff3b4e9f080e875f241ef3f78f = L.circle(
-                [35.71, 139.81],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.5, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 100, "stroke": true, "weight": 3}
-            ).addTo(map_c5de8d1da7284bcefcd390cbf976de7b);
+            tile_layer_a6135390d2411c97ce455bd27aae6a5d.addTo(map_9594e734cfeb5c56ce72ae6b2e9c2474);
         
 </script>
 </html>

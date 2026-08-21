@@ -22,6 +22,7 @@ folium.Circle(
     fill_opacity=0.5
 ).add_to(map)
 
-map = folium.Map(location=[lat, lon], zoom_start=16, tiles="cartodbdark_matter")
+# map = folium.Map(location=[lat, lon], zoom_start=16, tiles="cartodbdark_matter")
+map = folium.Map(location=[lat, lon], zoom_start=16, tiles="stamenterrain")
 
 map.save("tokyo_map.html")
