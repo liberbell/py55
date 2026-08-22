@@ -29,4 +29,7 @@ df = pd.read_csv("data/kindergartenlist.csv", encoding="shift-jis")
 df = df.loc[:, "名称":"経度"]
 print(df)
 
+geometry = gpd.points_from_xy(df["経度"], df["緯度"])
+gdf = gpd.GeoDataFrame(df, geometry=geometry)
+
 map.save("tokyo_map.html")
