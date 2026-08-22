@@ -34,6 +34,8 @@ gdf = gpd.GeoDataFrame(df, geometry=geometry)
 gdf.crs = 6668
 print(gdf)
 
-map = folium.Map(location=[])
+lat = 35.6291
+lon = 139.7389
+map = folium.Map(location=[lat, lon])
 
 map.save("tokyo_map.html")
