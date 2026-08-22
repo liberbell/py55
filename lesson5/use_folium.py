@@ -31,5 +31,6 @@ print(df)
 
 geometry = gpd.points_from_xy(df["経度"], df["緯度"])
 gdf = gpd.GeoDataFrame(df, geometry=geometry)
+print(gdf)
 
 map.save("tokyo_map.html")
