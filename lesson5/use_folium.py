@@ -26,6 +26,7 @@ folium.Circle(
 # map = folium.Map(location=[lat, lon], zoom_start=16, tiles="stamenterrain")
 
 df = pd.read_csv("data/kindergartenlist.csv", encoding="shift-jis")
+df = df.loc[:, "名称":"経度"]
 print(df)
 
 map.save("tokyo_map.html")
