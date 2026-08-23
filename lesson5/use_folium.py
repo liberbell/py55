@@ -36,6 +36,10 @@ print(gdf)
 
 lat = 35.6291
 lon = 139.7389
-map = folium.Map(location=[lat, lon])
+map = folium.Map(location=[lat, lon], zoom_start=13)
+
+folium.Choropleth(
+    gdf
+).add_to(map)
 
 map.save("tokyo_map.html")
