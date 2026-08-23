@@ -1,6 +1,7 @@
 import pandas as pd
 import geopandas as gpd
 import folium
+from folium.plugins import HeatMap
 
 lat = 35.71
 lon = 139.81
@@ -41,5 +42,12 @@ map = folium.Map(location=[lat, lon], zoom_start=13)
 folium.Choropleth(
     gdf
 ).add_to(map)
+
+pointlist = []
+for index, row in df.iterrows():
+    pointlist.append((row.緯度, row.経度))
+
+HeatMap(pointlist, radius=20, blur=5).add_to(map)
+
 
 map.save("tokyo_map.html")
