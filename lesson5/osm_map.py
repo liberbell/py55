@@ -23,4 +23,7 @@ folium.GeoJson(
     }
 ).add_to(m)
 
-m.save("kanagawa_road_map.html")
+gdf1 = ox.graph_from_gdfs(G)[0]
+print(gdf1)
+
+# m.save("kanagawa_road_map.html")
