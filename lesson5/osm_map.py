@@ -31,9 +31,13 @@ gdf2 = ox.graph_to_gdfs(G)[1]
 print(gdf2)
 
 skytree = (35.7100, 139.8108)
+skytree_x = 35.7100
+skytree_y = 139.8108
 edo_museum = (35.6963, 139.7967)
+edo_museum_x = 35.6963
+edo_museum_y = 139.7967
 
-start = ox.nearest_nodes(G, skytree)
+start = ox.nearest_nodes(G, X=skytree_x, Y=skytree_y)
 end = ox.nearest_nodes(G, edo_museum)
 
 
