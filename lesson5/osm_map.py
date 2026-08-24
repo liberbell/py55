@@ -40,6 +40,6 @@ edo_museum_y = 139.7967
 start = ox.nearest_nodes(G, X=skytree_x, Y=skytree_y)
 end = ox.nearest_nodes(G, X=edo_museum_x, Y=edo_museum_y)
 
-
+shortest_path = ox.shortest_path(G, start, end)
 
 # m.save("kanagawa_road_map.html")
