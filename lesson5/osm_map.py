@@ -6,6 +6,7 @@ from shapely.geometry import Point, LineString, Polygon
 query = "Kamakura-shi, Kanagawa, Japan"
 G = ox.graph_from_place(query, network_type="drive")
 
+
 # m = ox.plot_graph_folium(G, tiles="OpenStreetMap", color="blue", weight=2)
 
 gdf_nodes, gdf_edges = ox.graph_to_gdfs(G)
@@ -23,7 +24,7 @@ folium.GeoJson(
     }
 ).add_to(m)
 
-gdf1 = ox.graph_from_gdfs(G)[0]
+gdf1 = ox.graph_to_gdfs(G)[0]
 print(gdf1)
 
 # m.save("kanagawa_road_map.html")
