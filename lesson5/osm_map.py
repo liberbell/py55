@@ -38,7 +38,7 @@ edo_museum_x = 35.6963
 edo_museum_y = 139.7967
 
 start = ox.nearest_nodes(G, X=skytree_x, Y=skytree_y)
-end = ox.nearest_nodes(G, edo_museum)
+end = ox.nearest_nodes(G, X=edo_museum_x, Y=edo_museum_y)
 
 
 
