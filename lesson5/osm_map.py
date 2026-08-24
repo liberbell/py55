@@ -30,4 +30,12 @@ print(gdf1)
 gdf2 = ox.graph_to_gdfs(G)[1]
 print(gdf2)
 
+skytree = (35.7100, 139.8108)
+edo_museum = (35.6963, 139.7967)
+
+start = ox.nearest_nodes(G, skytree)
+end = ox.nearest_nodes(G, edo_museum)
+
+
+
 # m.save("kanagawa_road_map.html")
