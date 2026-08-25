@@ -59,6 +59,12 @@ folium.GeoJson(
 ).add_to(m)
 
 folium.Marker(
+    location=[skytree_y, skytree_x],
+    tooltip="start",
+    icon=folium.Icon(color="red"),
+).add_to(m)
+
+folium.Marker(
     location=[edo_museum_y, edo_museum_x],
     tooltip="end",
     icon=folium.Icon(color="red"),
