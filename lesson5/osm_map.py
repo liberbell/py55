@@ -41,6 +41,9 @@ edo_museum_y = 139.7967
 start = ox.nearest_nodes(G, X=skytree_x, Y=skytree_y)
 end = ox.nearest_nodes(G, X=edo_museum_x, Y=edo_museum_y)
 
+print(f"始点ノードID: {start}")
+print(f"終点ノードID: {end}")
+
 shortest_path = ox.shortest_path(G, start, end)
 
 route_gdf = ox.routing.route_to_gdf(G, shortest_path)
