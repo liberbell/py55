@@ -47,5 +47,8 @@ print(f"終点ノードID: {end}")
 shortest_path = ox.shortest_path(G, start, end)
 
 route_gdf = ox.routing.route_to_gdf(G, shortest_path)
+m = folium.Map(location=[skytree_y, skytree_x], zoom_start=14)
 
-# m.save("kanagawa_road_map.html")
+# new_fmap = ox.plot_route_folium()
+
+m.save("kanagawa_road_map.html")
