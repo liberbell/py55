@@ -42,4 +42,6 @@ end = ox.nearest_nodes(G, X=edo_museum_x, Y=edo_museum_y)
 
 shortest_path = ox.shortest_path(G, start, end)
 
+route_gdf = ox.routing.route_to_gdf(G, shortest_path)
+
 # m.save("kanagawa_road_map.html")
