@@ -5,6 +5,9 @@ df = px.data.gapminder()
 
 # figure = px.scatter(df, x="gdpPercap", y="lifeExp", log_x=True, hover_name="continent")
 
-figure = px.choropleth(df[df["year"]==2007], locations="iso_alpha", color="gdpPercap")
+# figure = px.choropleth(df[df["year"]==2007], locations="iso_alpha", color="gdpPercap")
 
-# figure.show()
+figure = px.choropleth(df, locations="iso_alpha", color="gdpPercap", animation_frame="year")
+
+
+figure.show()
