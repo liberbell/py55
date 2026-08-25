@@ -49,6 +49,15 @@ shortest_path = ox.shortest_path(G, start, end)
 route_gdf = ox.routing.route_to_gdf(G, shortest_path)
 m = folium.Map(location=[skytree_y, skytree_x], zoom_start=14)
 
+folium.GeoJson(
+    route_gdf,
+    style_function=lambda x: {
+        "color": "blue",  # ルートの線の色
+        "weight": 5,  # 線の太さ
+        "opacity": 0.8,  # 透明度
+    },
+).add_to(m)
+
 # new_fmap = ox.plot_route_folium()
 
-m.save("kanagawa_road_map.html")
+m.save("route_from_skytree.html")
