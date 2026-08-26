@@ -5,4 +5,13 @@ import numpy as np
 
 # df = pd.read_csv("data/owid-covid-latest.csv", encoding="utf-8")
 df = pd.read_csv("data/owid-covid-data-last-ecdc.csv", encoding="utf-8")
-print(df)
+# print(df)
+
+# print(df[df["location"] == "Japan"])
+# print(df.dtypes)
+
+df_test = df[df["date"] == "2020-11-20"]
+print(df_test)
+
+avg_cases = df_test["new_cases"].median()
+px.choropleth(df_test, locations="iso_code", color="new_cases", range_color=[0, 10000], color_continuous_midpoint=avg_cases).show()
