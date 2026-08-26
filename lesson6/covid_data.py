@@ -18,3 +18,5 @@ avg_cases = df_test["new_cases"].median()
 
 df_test["log_cases"] = df["new_cases"].apply(np.log10)
 px.choropleth(df_test, locations="iso_code", color="log_cases", range_color=[0, 6], color_continuous_midpoint=avg_cases).show()
+
+df["date_yyyymm"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m")
