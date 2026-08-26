@@ -22,4 +22,6 @@ df_test["log_cases"] = df["new_cases"].apply(np.log10)
 df["date_yyyymm"] = pd.to_datetime(df["date"]).dt.strftime("%Y-%m")
 
 df_month_mean = df.groupby(["date_yyyymm", "iso_code", "location"]).mean(numeric_only=True).reset_index()
-print(df_month_mean)
+px.choropleth(df_month_mean, locations="iso_code", color="new_cases", range_color=[0, 10000], animation_frame="date_yyyymm").show()
+
+# print(df_month_mean)
